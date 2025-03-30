@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyberCalc - Aprende cálculo en un mundo cyberpunk</title>
-    <meta name="description" content="Una experiencia educativa inmersiva para aprender cálculo diferencial mediante tecnologías interactivas y gamificadas en un entorno cyberpunk." />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <!-- Script para manejar el enrutamiento SPA en GitHub Pages -->
-    <script type="text/javascript" src="./spa-router-fix.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080F1C" />
+  <meta name="description" content="CyberCalc - Plataforma educativa inmersiva para aprender cálculo diferencial" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>CyberCalc - Aprende Cálculo Diferencial</title>
+  
+  <!-- Script para manejar redirecciones en GitHub Pages -->
+  <script type="text/javascript">
+    // Script para manejar SPA en GitHub Pages
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
+  
+  <style>
+    body {
+      background-color: #080F1C;
+      color: #E1E7EF;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 4px solid rgba(0, 180, 216, 0.2);
+      border-top-color: #00B4D8;
+      animation: spin 1s infinite linear;
+      margin-bottom: 20px;
+    }
+    
+    .loading-text {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      color: #00B4D8;
+      text-align: center;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <!-- Precarga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="root">
+    <div class="loading">
+      <div class="spinner"></div>
+      <div class="loading-text">Inicializando CyberCalc...</div>
+      <p style="margin-top: 10px; font-size: 12px; color: #3A4559;">Versión para GitHub Pages</p>
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
