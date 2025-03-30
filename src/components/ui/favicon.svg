@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>CyberCalc</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="cyberGradient">
+            <stop stop-color="#00FFFF" offset="0%"></stop>
+            <stop stop-color="#FF00FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" fill="none">
+        <rect fill="#0A0A12" x="0" y="0" width="512" height="512" rx="64"></rect>
+        <path d="M256,96 C362.039,96 448,181.961 448,288 C448,394.039 362.039,480 256,480 C149.961,480 64,394.039 64,288 C64,181.961 149.961,96 256,96 Z" stroke="url(#cyberGradient)" stroke-width="16"></path>
+        <path d="M256,128 C344.366,128 416,199.634 416,288 C416,376.366 344.366,448 256,448 C167.634,448 96,376.366 96,288 C96,199.634 167.634,128 256,128 Z" stroke="#00FFFF" stroke-width="4" stroke-dasharray="12,8"></path>
+        <path d="M226,208 L286,208 L286,248 L226,248 L226,208 Z" fill="#00FFFF"></path>
+        <path d="M226,264 L286,264 L286,304 L226,304 L226,264 Z" fill="#FF00FF"></path>
+        <path d="M226,320 L286,320 L286,360 L226,360 L226,320 Z" fill="#FFFF00"></path>
+        <text font-family="'Orbitron', sans-serif" font-size="52" font-weight="bold" fill="#FFFFFF" x="350" y="200" transform="rotate(45, 350, 200)">∫</text>
+        <text font-family="'Orbitron', sans-serif" font-size="60" font-weight="bold" fill="#FFFFFF" x="160" y="340" transform="rotate(-30, 160, 340)">f'</text>
+    </g>
+</svg>

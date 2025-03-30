@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redireccionando a CyberCalc</title>
+  <script type="text/javascript">
+    // Técnica de redirección SPA para GitHub Pages
+    // Extraer el path solicitado para usarlo como hash route
+    const path = window.location.pathname;
+    const basePath = ''; // Usar string vacío ya que estamos usando base='./'
+    
+    // Redireccionar a la página principal con la ruta como hash
+    window.location.href = basePath + '/#' + path;
+  </script>
+</head>
+<body>
+  <h2>Redireccionando a CyberCalc...</h2>
+  <p>Si no eres redirigido automáticamente, <a href="./">haz clic aquí</a>.</p>
+</body>
+</html>

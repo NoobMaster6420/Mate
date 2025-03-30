@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080F1C;
+  --foreground: #E1E7EF;
+  --muted: #3A4559;
+  --muted-foreground: #9BA1B0;
+  --primary: #00B4D8;
+  --primary-foreground: #ffffff;
+  --secondary: #F72585;
+  --secondary-foreground: #ffffff;
+  --accent: #7209B7;
+  --accent-foreground: #ffffff;
+  --destructive: #FF3131;
+  --destructive-foreground: #ffffff;
+  --border: #232B3D;
+  --input: #151F30;
+  --card: #101724;
+  --card-foreground: #E1E7EF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+.bg-cyberdark {
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(0, 180, 216, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.08) 0%, transparent 50%);
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Animaciones de elementos cyberpunk */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.8), 0 0 30px rgba(0, 180, 216, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
+  }
+}
+
+.cyber-glow {
+  animation: glow 2s infinite;
+}
+
+/* Estilos para LaTeX */
+.latex-formula {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Personalización de scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--input);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

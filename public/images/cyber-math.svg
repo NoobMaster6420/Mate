@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>CyberMath Logo</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="cyberGradient">
+            <stop stop-color="#00FFFF" offset="0%"></stop>
+            <stop stop-color="#FF00FF" offset="100%"></stop>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="10" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+    </defs>
+    <g stroke="none" fill="none">
+        <!-- Background -->
+        <rect fill="#0A0A12" x="0" y="0" width="600" height="600"></rect>
+        
+        <!-- Decorative grid lines -->
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="0" y1="200" x2="600" y2="200" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="0" y1="300" x2="600" y2="300" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="0" y1="400" x2="600" y2="400" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="0" y1="500" x2="600" y2="500" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        
+        <line x1="100" y1="0" x2="100" y2="600" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="200" y1="0" x2="200" y2="600" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="300" y1="0" x2="300" y2="600" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="400" y1="0" x2="400" y2="600" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        <line x1="500" y1="0" x2="500" y2="600" stroke="#00FFFF" stroke-width="1" stroke-opacity="0.2" />
+        
+        <!-- Main circle -->
+        <circle cx="300" cy="300" r="200" stroke="url(#cyberGradient)" stroke-width="8" filter="url(#glow)" />
+        
+        <!-- Inner decorations -->
+        <circle cx="300" cy="300" r="150" stroke="#FF00FF" stroke-width="3" stroke-dasharray="15,10" />
+        <circle cx="300" cy="300" r="100" stroke="#00FFFF" stroke-width="3" stroke-dasharray="10,5" />
+        
+        <!-- Math Symbols -->
+        <text font-family="'Orbitron', sans-serif" font-size="80" font-weight="bold" fill="#00FFFF" x="170" y="320" filter="url(#glow)">∫</text>
+        <text font-family="'Orbitron', sans-serif" font-size="80" font-weight="bold" fill="#FF00FF" x="300" y="320" filter="url(#glow)">dy/dx</text>
+        
+        <!-- Decorative Elements -->
+        <path d="M150,400 L200,450 L150,500 Z" fill="#FFFF00" filter="url(#glow)" />
+        <path d="M450,400 L400,450 L450,500 Z" fill="#FFFF00" filter="url(#glow)" />
+        
+        <!-- Graph line -->
+        <path d="M100,400 C200,250 300,350 400,200 S500,300 600,150" stroke="#00FFFF" stroke-width="4" fill="none" filter="url(#glow)" />
+    </g>
+</svg>
